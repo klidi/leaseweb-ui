@@ -1,0 +1,29 @@
+﻿<div class="row">
+    <div class="col-md-12 pt-5">
+        <button type="button" class="btn btn-primary" routerLink="/servers/create">Add Server</button>
+    </div>
+    <div class="col-md-12 pt-2">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Asset Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Total Ram</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let server of servers">
+                    <td scope>{{server.id}}</td>
+                    <td>{{server.assetId}}</td>
+                    <td>{{server.name}}</td>
+                    <td>{{server.brand.name}}</td>
+                    <td>{{totalRam(server.ramModules)}}</td>
+                    <td>{{server.price.amount}} {{server.price.currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
