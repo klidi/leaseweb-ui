@@ -1,5 +1,5 @@
-# angular-8-registration-login-example
+# Leaseweb-ui
 
-Angular 8 User Registration and Login Example with Webpack 4
+This is a very quick solution to a simple ui, i got a ready login example app in angular8 and added the functionality.
+Its done ine 2hr so there is nothing refined in it. Its just to provide an interface for creating and displaying servers, given the right input data :P :P
 
-Full tutorial with example available at https://jasonwatmore.com/post/2019/06/10/angular-8-user-registration-and-login-example-tutorial
