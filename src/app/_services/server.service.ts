@@ -14,7 +14,6 @@ export class ServerService {
 
         return this.http.get<any>(`${config.apiUrl}/api/users/${userId}/servers`)
             .pipe(map(result => {
-                console.log(result);
                 // i am not casting the price, brand and ramModules to proper as this has to be a simple ui so im trying to be quick
                 result.data.forEach(element => {
                     let server = new Server();

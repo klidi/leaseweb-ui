@@ -20,7 +20,6 @@ export class ServersComponent implements OnInit {
         this.serverService.findAll(this.currentUser.id)
             .pipe(first())
             .subscribe(servers => {
-                console.log(servers);
                 this.servers = servers;
             });
     }

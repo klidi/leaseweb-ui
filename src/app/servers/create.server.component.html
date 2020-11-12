@@ -38,22 +38,20 @@
 
     <div formArrayName="ramModules" *ngFor="let ramModules of createServerForm.controls.ramModules?.value; let i = index">
         <div [formGroupName]="i" class="form-group row">
-            <label class="col-xl-5">Size
-                <input ormControlName="size"  type="text" class="form-control" placeholder="" [ngClass]="{ 'is-invalid': submitted && f.ramModules.errors }"/>
-            </label>
-
-            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                <div *ngIf="f.price.errors.required">Price is required</div>
+            <div class="col-xl-5">
+                <label >Size</label>
+                <input formControlName="size" type="text" class="form-control" placeholder=""/>
             </div>
-            <label class="col-xl-5">
-                Ram type
-                <select class="form-control" formControlName="type" [ngClass]="{ 'is-invalid': submitted && f.ramModules.errors }">
+
+            <div class="col-xl-5">
+                <label>Ram type</label>
+
+                <select class="form-control" formControlName="type">
                     <option value="{{type}}" *ngFor="let type of ramTypes">{{type}}</option>
                 </select>
-            </label>
-            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                <div *ngIf="f.price.ramModules.required">Both module fields are required</div>
             </div>
+
+
             <button type="button" class="btn btn-danger btn-sm" (click)="removeModule(i)">
                 <i class="fa fa-trash-o fa-lg"></i>
             </button>
