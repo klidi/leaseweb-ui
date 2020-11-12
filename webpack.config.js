@@ -37,7 +37,7 @@ module.exports = {
         new webpack.DefinePlugin({
             // global app config object
             config: JSON.stringify({
-                apiUrl: 'http://127.0.0.1:8000'
+                apiUrl: 'http://18.185.94.188'
             })
         }),
 
